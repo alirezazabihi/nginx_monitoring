@@ -38,7 +38,7 @@ Installation:
 Part 1 (Nginx side):
 
 0 - Check for with-http_stub_status_module enabled or not:
-# nginx -V 2>&1 | grep -o with-http_stub_status_module
+nginx -V 2>&1 | grep -o with-http_stub_status_module
 with-http_stub_status_module
 -------------------------------------------------------------------------
     ### if there is not any output you need to configure nginx with --with-http_stub_status_module:
@@ -47,7 +47,7 @@ with-http_stub_status_module
 ------------------------------------------------------------------------
 
 1 - Edit Nginx configuration and add nginx_status location to your website server context:
-# vi /etc/nginx/nginx.conf
+vi /etc/nginx/nginx.conf
 server {
 
             listen 80;
@@ -66,29 +66,29 @@ server {
 :wq  # ---> save and quit
 
 2 - Restart nginx service
-# systemctl restart nginx     or    # nginx -s reload
+systemctl restart nginx     or    # nginx -s reload
 
 *****************************************************
 Part 2 (Linux side):
 
 1 - download script file "nginx.sh" and put it in nginx server in /etc/zabbix/ 
-# chmod 775 nginx.sh
-# cp nginx.sh /etc/zabbix/
+chmod 775 nginx.sh
+cp nginx.sh /etc/zabbix/
 
 2 - Installing bc (Bash Calculator) if doesnt exist
-# yum install bc -y
+yum install bc -y
 
 ************************************************
 Part 3 (Zabbix agent side):
 
 1 - Edit zabbix_agent.conf file on Nginx server and add UserParameter:
-# vi /etc/zabbix/zabbix-agent.conf
+vi /etc/zabbix/zabbix-agent.conf
 UserParameter=nginx[*],/root/nginx.sh $1
 
 :wq   # ---> save and quit
 
 2 - Restart zabbix-agent service:
-# systemctl restart zabbix-agent
+systemctl restart zabbix-agent
 
 *************************************************
 Part 4 (Zabbix frontend side):
