@@ -41,28 +41,25 @@ Part 1 (Nginx side):
 nginx -V 2>&1 | grep -o with-http_stub_status_module
 with-http_stub_status_module
 
--------------------------------------------------------------------------
-
-    ### if there is not any output you need to configure nginx with --with-http_stub_status_module:
-    ### ./cofigure --with-http_stub_status_module
-    ### make && make install
+    if there is not any output you need to configure nginx with --with-http_stub_status_module:
+    ./cofigure --with-http_stub_status_module
+    make && make install
     
-------------------------------------------------------------------------
-
 1 - Edit Nginx configuration and add nginx_status location to your website server context:
 vi /etc/nginx/nginx.conf
-server {
 
-            listen 80;
-            server_name 192.168.1.10;
-             
-            # add nginx_status location for nginx monitoring 
-            location /nginx_status {
-            stub_status on;
-            access_log   off;
-            allow 127.0.0.1;
-            deny all;
-        }
+server {
+    listen 80;
+    server_name 192.168.1.10;
+        
+    # add nginx_status location for nginx monitoring 
+
+    location /nginx_status {
+    stub_status on;
+    access_log   off;
+    allow 127.0.0.1;
+    deny all;
+    }
         
 }
 
