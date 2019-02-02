@@ -1,0 +1,1 @@
+UserParameter=nginx[*],/etc/zabbix/nginx.sh $1
