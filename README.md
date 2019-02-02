@@ -1,4 +1,4 @@
-# monitoring
+# nginx_monitoring
 Zabbix 4 Nginx monitoring by Alireza Zabihi based on Alex Gluck solution.
 
 
