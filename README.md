@@ -1,5 +1,5 @@
 # nginx_monitoring
-Zabbix 4 Nginx monitoring by Alireza Zabihi based on Alex Gluck solution.
+Zabbix 4 Nginx monitoring by Alireza Zabihi based on Alex Gluck solution on Centos 7.6 .
 
 
 Connection Statistics:
