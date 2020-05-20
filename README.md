@@ -1,5 +1,5 @@
 # nginx_monitoring
-Zabbix 4 Nginx monitoring by Alireza Zabihi based on Alex Gluck solution on Centos 7.6 .
+Zabbix 4 LTS Nginx monitoring by Alireza Zabihi based on Alex Gluck solution on Centos 7.6
 
 
 Connection Statistics:
@@ -29,3 +29,5 @@ Graph and screen:
 Triggers:
 - Nginx service status
 - Worker processes bad configuration
+
+Please read Installation file
