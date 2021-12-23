@@ -6,7 +6,7 @@ Part 1 (Nginx side):
 with-http_stub_status_module
 
 ### if there is not any output you need to configure nginx with --with-http_stub_status_module:
-### ./cofigure --with-http_stub_status_module
+### ./configure --with-http_stub_status_module
 ### make && make install
 
 1 - Edit Nginx configuration and add nginx_status location to your website server context: 
